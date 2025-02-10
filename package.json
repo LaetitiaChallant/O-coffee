@@ -1,0 +1,31 @@
+{
+  "name": "s09-ocoffee-laetitiachallant",
+  "version": "1.0.0",
+  "description": "Site vitrine de O'Coffee",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Sushi/S09-ocoffee-LaetitiaChallant.git"
+  },
+  "author": "LaetitiaChallant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Sushi/S09-ocoffee-LaetitiaChallant/issues"
+  },
+  "homepage": "https://github.com/O-clock-Sushi/S09-ocoffee-LaetitiaChallant#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.20.0"
+  }
+}
