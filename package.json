@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Site vitrine de O'Coffee",
   "main": "index.js",
+  "tailwind:css": "postcss -i public/styles/tailwind.css -o public/styles/style.css",
   "type": "module",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "build:css": "postcss public/styles/tailwind.css -o public/styles/style.css"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,16 @@
   },
   "homepage": "https://github.com/O-clock-Sushi/S09-ocoffee-LaetitiaChallant#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.5",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "postcss-cli": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.20.0"
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.20.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.6"
   }
 }
