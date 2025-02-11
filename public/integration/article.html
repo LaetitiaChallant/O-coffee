@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>O coffee</title>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-lighter text-darker">
+  
+  <header class="flex justify-between">
+    <div class="flex items-center">
+      <img src="assets/logo.svg" alt="Logo O'Coffee">
+      <h1 class="font-mono text-4xl mb-2">O'Coffee</h1>
+    </div>    
+    <nav class="flex items-center">
+      <ul class="flex items-center">
+        <li class="mx-2 btn"><a href="/">Accueil</a></li>
+        <li class="mx-2 btn"><a href="/shop">Catalogue</a></li>        
+      </ul>
+    </nav>
+  </header> 
+
+  <main class="container my-16 mx-auto">
+    
+    <div class="flex flex-col-reverse">
+      <div class="flex flex-col">
+        <h2 class="text-6xl font-extrabold uppercase p-4">Café Columbian</h2>        
+        <p class="text-2xl px-4 py-2">
+          Café moyennement corsé avec une acidité vive et une saveur riche.
+        </p>
+        <div class="details w-3/4 flex justify-between items-baseline m-4">
+          <p class="text-xl">Origine: <strong class="font-bold capitalize">Colombie</strong> </p>
+          <p class="btn ">Acide</p>
+        </div>
+        <div class="details w-3/4 flex justify-between items-baseline m-4">
+          <p class="text-xl">Prix: <strong class="font-bold capitalize">18,75</strong> € le kilo</p>
+          <p class="text-xl">Disponible</p>
+        </div>        
+      </div>
+
+      <div class="self-end">
+        <img class="m-4" src="/assets/coffees/100955894.png" alt="café columbian">
+      </div>
+    </div>    
+  </main>
+
+  <footer class="backdrop-contrast-75 text-center">
+    <small>O'Coffee - 2025</small>
+  </footer>
+</body>
+</html>
