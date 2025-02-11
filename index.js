@@ -2,33 +2,16 @@ import "dotenv/config";
 import express from "express";
 
 import path from "path";
+import router from "./app/router.js";
 
 const app = express();
 app.set('view engine', 'ejs');
-app.set('views', 'app/views');
+app.set('views', path.join(import.meta.dirname,'app/views'));
 
 app.use(express.static(path.join(import.meta.dirname, "public")));
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html', {
-    root: path.join(import.meta.dirname, '/public/integration')
-  });
-});
-app.get('/shop', (req, res) => {
-  res.sendFile('shop.html', {
-    root: path.join(import.meta.dirname, '/public/integration')
-  });
-});
-app.get('/article', (req, res) => {
-  res.sendFile('article.html', {
-    root: path.join(import.meta.dirname, '/public/integration')
-  });
-});
-app.get('/404', (req, res) => {
-  res.sendFile('404.html', {
-    root: path.join(import.meta.dirname, '/public/integration')
-  });
-});
+app.use(router);
+
 const port = process.env.PORT;
 
 app.listen(port, () => {
