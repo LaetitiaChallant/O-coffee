@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5aa7664434.js" crossorigin="anonymous"></script>
+  <script defer src="/javascript/home.js"></script>
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>O coffee</title>
+</head>
+<body class="min-h-screen lfex flex-col justify-between bg-lighter text-darker">
+  
+  <header class="flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="assets/logo.svg" alt="Logo O'Coffee">
+      <h1 class="font-mono text-4xl mb-2">O'Coffee</h1>
+    </div> 
+    <div id="menu-trigger" class="sm:hidden p-4 cursor-pointer">
+      <i class="fa-solid fa-bars fa-xl"></i>
+      <i class="fa-solid fa-xmark fa-xl !hidden"></i>
+    </div>   
+    <nav id="menu" class="sm:flex sm:items-center hidden">
+      <ul class="sm:flex sm:items-center ">
+        <li class="m-2 btn"><a href="/">Accueil</a></li>
+        <li class="m-2 btn"><a href="/shop">Catalogue</a></li>        
+      </ul>
+    </nav>
+  </header> 
