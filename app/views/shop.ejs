@@ -1,39 +1,26 @@
 <%- include('partials/header') %>
+
   <main class="container my-16 mx-auto">
     <div class="h-96 bg-[url(/assets/about.jpg)] brightness-125 my-16 bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-lg">
       
-      <h2 class="text-primary text-center text-8xl font-extrabold uppercase p-4 backdrop-brightness-50 rounded-lg">Notre catalogue</h2>
-      
+      <h2 class="text-primary text-center text-8xl font-extrabold uppercase p-4 backdrop-brightness-50 rounded-lg">Notre catalogue</h2>      
     </div>
+
     <div class="flex flex-col gap-y-4 md:gap-y-0 md:flex-row md:gap-x-4">
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Columbian</h3>
-        <div class="details w-3/4 flex justify-between items-baseline m-4">
-          <p class="text-xl">Origine: <strong class="font-bold capitalize">Colombie</strong> </p>
-          <p class="btn ">Acide</p>
-        </div>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/100955894.png" alt="caféier">
-        <a href="/article" class="btn m-4">Découvrir</a>
-      </article>
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Ethiopian Yirgacheffe</h3>
-        <div class="details w-3/4 flex justify-between items-baseline m-4">
-          <p class="text-xl">Origine: <strong class="font-bold capitalize">éthiopie</strong> </p>
-          <p class="btn ">Fruité</p>
-        </div>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/105589090.png" alt="caféier">
-        <button class="btn m-4">Découvrir</button>
-      </article>
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Brazilian Santos</h3>
-        <div class="details w-3/4 flex justify-between items-baseline m-4">
-          <p class="text-xl">Origine: <strong class="font-bold capitalize">brésil</strong> </p>
-          <p class="btn ">Doux</p>
-        </div>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/134009550.png" alt="caféier">
-        <button class="btn m-4">Découvrir</button>
-      </article>
-    </div>   
+      <% coffees.forEach(coffee => { %>
+        <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
+          <h3 class="text-center h-32 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
+          <div class="details w-3/4 flex justify-between items-baseline m-4">
+            <p class="text-xl">Origine: <strong class="font-bold capitalize"><%= coffee.origin %></strong> </p>
+            <p class="btn "><%= coffee.flavor_profile %></p>
+          </div>
+          <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="<%= coffee.name %>">
+          <a href="/article/<%= coffee.id %>" class="btn m-4">Découvrir</a>
+        </article>
+      <% }) %>
+      
+    </div>  
+     
     <button class="btn mx-12 my-16">Voir tous nos produits</button>
   </main>
   <%- include('partials/footer') %>

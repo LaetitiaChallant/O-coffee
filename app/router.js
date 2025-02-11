@@ -7,7 +7,7 @@ const router = Router();
 
 router.get('/', maincontroller.renderHomePage);
 router.get('/shop', shopController.renderShopPage);
-router.get('/article', shopController.renderArticlePage);
+router.get('/article/:id', shopController.renderArticlePage);
 
 
 export default router;
