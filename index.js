@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     root: path.join(import.meta.dirname, '/public/integration')
   });
 });
+app.get('/shop', (req, res) => {
+  res.sendFile('shop.html', {
+    root: path.join(import.meta.dirname, '/public/integration')
+  });
+});
 
 const port = process.env.PORT;
 
