@@ -25,21 +25,14 @@
     </div>
     <h2 class="text-6xl font-extrabold uppercase p-4 my-8">Nos nouveautés</h2>
     <div class="carousel flex flex-col gap-y-4 md:gap-y-0 md:flex-row md:gap-x-4">
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Columbian</h3>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/100955894.png" alt="caféier">
-        <button class="btn m-4">Découvrir</button>
-      </article>
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Ethiopian Yirgacheffe</h3>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/105589090.png" alt="caféier">
-        <button class="btn m-4">Découvrir</button>
-      </article>
-      <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
-        <h3 class="text-center h-32 text-2xl font-bold uppercase p-4">Brazilian Santos</h3>
-        <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/134009550.png" alt="caféier">
-        <button class="btn m-4">Découvrir</button>
-      </article>
+      <% for (let coffee of coffees.slice(0, 3)) { %>
+        <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
+          <h3 class="text-center h-32 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
+          <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="café <%= coffee.name %>">
+          <button class="btn m-4">Découvrir</button>
+        </article>
+      <% } %>
+      
     </div>   
     
   </main>
