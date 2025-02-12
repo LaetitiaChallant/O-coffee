@@ -32,3 +32,8 @@
 .btn:active {
   box-shadow: none;
 }
+
+.separation {
+  border-bottom: 1px solid #3e1e049d;
+  box-shadow: 0 4px 4px -3px #3e1e049d;
+}
