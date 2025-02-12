@@ -17,3 +17,9 @@ export const renderAboutPage = (req,res) => {
 export const renderContactPage = (req, res) => {
   res.render('contact');
 };
+
+export const handleContactForm = (req,res) => {
+  const {name, email, message} = req.body;
+  console.log(name, email, message);
+  
+}

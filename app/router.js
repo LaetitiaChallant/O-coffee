@@ -7,7 +7,8 @@ const router = Router();
 
 router.get('/', maincontroller.renderHomePage);
 router.get('/about', maincontroller.renderAboutPage);
-router.get('/contact', maincontroller.renderContactPage)
+router.get('/contact', maincontroller.renderContactPage);
+router.post('/contact', maincontroller.handleContactForm);
 
 router.get('/shop', shopController.renderShopPage);
 router.get('/article/:id', shopController.renderArticlePage);
