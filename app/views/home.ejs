@@ -12,7 +12,7 @@
         <p class="px-4 py-2">
           Les étagères en bois exposent fièrement une variété de grains de café provenant des quatre coins du monde, chacun racontant une histoire unique de terroir et de culture. Les sacs de café empilés dévoilent une palette de couleurs allant des tons chocolat aux nuances ambrées, invitant à l'exploration sensorielle.
         </p>
-        <button class="btn self-end m-4">En savoir plus</button>
+        <a href="/about" class="btn self-end m-4">En savoir plus</a>
       </div>
       <div class="basis-1/2 flex flex-col justify-center">
         <img class="object-contain" src="/assets/about.jpg" alt="sélection de cafés">
@@ -20,7 +20,7 @@
     </div>
     <div class="h-96 bg-[url(/assets/coffees/100955890.png)] brightness-125 my-4 bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-lg">
       <div class="flex justify-center items-center">
-        <button class="btn m-4">Découvrez notre catalogue</button>
+        <a href="/shop" class="btn m-4">Découvrez notre catalogue</a>
       </div>
     </div>
     <h2 class="text-6xl font-extrabold uppercase p-4 my-8">Nos nouveautés</h2>
@@ -29,7 +29,7 @@
         <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
           <h3 class="text-center h-32 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
           <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="café <%= coffee.name %>">
-          <button class="btn m-4">Découvrir</button>
+          <a href="/article/<%= coffee.id %>" class="btn m-4">Découvrir</a>
         </article>
       <% } %>
       

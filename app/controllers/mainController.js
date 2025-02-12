@@ -9,3 +9,11 @@ export const renderHomePage = async (req, res) => {
     res.status(500).send("Une erreur s'est produite.");
   }
 };
+
+export const renderAboutPage = (req,res) => {
+  res.render('about');
+};
+
+export const renderContactPage = (req, res) => {
+  res.render('contact');
+};

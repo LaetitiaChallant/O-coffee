@@ -1,4 +1,4 @@
-<%- include('partials/header') %>
+<%- include('partials/header', {script: coffees}) %>
 
   <main class="container my-16 mx-auto">
     <div class="h-96 bg-[url(/assets/about.jpg)] brightness-125 my-16 bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-lg">
@@ -6,9 +6,9 @@
       <h2 class="text-primary text-center text-8xl font-extrabold uppercase p-4 backdrop-brightness-50 rounded-lg">Notre catalogue</h2>      
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 justify-items-center">
+    <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 justify-items-center">
       <% for (let coffee of coffees.slice(0, 3)) { %>
-        <article class="w-sm md:w-xs  lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
+        <article class="w-sm lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
           <h3 class="text-center h-16 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
           <div class="details w-3/4 flex justify-between items-baseline m-4">
             <p class="text-xl">Origine: <strong class="font-bold capitalize"><%= coffee.origin %></strong> </p>
@@ -23,9 +23,9 @@
 
     <button id="all-product" class="btn mx-12 my-16">Voir tous nos produits</button>
 
-    <div id="others-products" class="mt-8 grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 justify-items-center hidden">
+    <div id="others-products" class="mt-8 grid-cols-1 xl:grid-cols-3 gap-8 justify-items-center hidden">
       <% for (let coffee of coffees.slice(3)) { %>
-        <article class="w-sm md:w-xs  lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
+        <article class="w-sm lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
           <h3 class="text-center h-16 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
           <div class="details w-3/4 flex justify-between items-baseline m-4">
             <p class="text-xl">Origine: <strong class="font-bold capitalize"><%= coffee.origin %></strong> </p>
