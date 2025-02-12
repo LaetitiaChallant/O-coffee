@@ -9,5 +9,8 @@ router.get('/', maincontroller.renderHomePage);
 router.get('/shop', shopController.renderShopPage);
 router.get('/article/:id', shopController.renderArticlePage);
 
+router.use((req, res) => {
+  res.status(404).render("404");
+});
 
 export default router;
