@@ -7,7 +7,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 justify-items-center">
-      <% coffees.forEach(coffee => { %>
+      <% for (let coffee of coffees.slice(0, 3)) { %>
         <article class="w-sm md:w-xs  lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
           <h3 class="text-center h-16 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
           <div class="details w-3/4 flex justify-between items-baseline m-4">
@@ -17,10 +17,27 @@
           <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="<%= coffee.name %>">
           <a href="/article/<%= coffee.id %>" class="btn m-4">Découvrir</a>
         </article>
-      <% }) %>
+      <% } %>
+      
+    </div>  
+
+    <button id="all-product" class="btn mx-12 my-16">Voir tous nos produits</button>
+
+    <div id="others-products" class="mt-8 grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 justify-items-center hidden">
+      <% for (let coffee of coffees.slice(3)) { %>
+        <article class="w-sm md:w-xs  lg:w-sm flex flex-col items-center rounded-lg shadow shadow-darker">
+          <h3 class="text-center h-16 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
+          <div class="details w-3/4 flex justify-between items-baseline m-4">
+            <p class="text-xl">Origine: <strong class="font-bold capitalize"><%= coffee.origin %></strong> </p>
+            <p class="btn "><%= coffee.flavor_profile %></p>
+          </div>
+          <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="<%= coffee.name %>">
+          <a href="/article/<%= coffee.id %>" class="btn m-4">Découvrir</a>
+        </article>
+      <% } %>
       
     </div>  
      
-    <button class="btn mx-12 my-16">Voir tous nos produits</button>
+    
   </main>
   <%- include('partials/footer') %>
