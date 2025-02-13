@@ -5,6 +5,7 @@ import path from "path";
 import router from "./app/router.js";
 
 const app = express();
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(import.meta.dirname,'app/views'));
 
