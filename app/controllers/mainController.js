@@ -12,7 +12,7 @@ export const renderHomePage = async (req, res) => {
 };
 
 export const renderAboutPage = (req,res) => {
-  res.render('about');
+  res.render('about', { map: true });
 };
 
 export const renderContactPage = (req, res) => {
