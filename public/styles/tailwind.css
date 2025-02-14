@@ -7,9 +7,8 @@
   }
 }
 @theme {
-  --color-primary: #F7DBB9;
-  --color-secondary: #BAEEF7;
-  --color-lighter: #E3F7BA;
+  --color-primary: #F7DBB9;  
+  --color-wisegreen: #7C8C63;
   --color-darker: #3E1E04;
   --color-danger: #CF640C;
 
@@ -27,7 +26,7 @@
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #BAEEF7;  
+  background-color: #7C8C63;  
 }
 .btn:active {
   box-shadow: none;

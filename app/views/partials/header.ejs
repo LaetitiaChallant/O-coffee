@@ -17,30 +17,38 @@
    crossorigin=""></script>
   
   <% if (typeof map !== "undefined") { %>
-    <script type="module" defer src="/javascript/map.js"></script>
+    <script defer src="/javascript/map.js"></script>
   <% } %>
+  <script defer src="/javascript/success-message.js"></script>
   <link rel="stylesheet" href="/styles/style.css">
   <title>O coffee</title>
 </head>
-<body class="min-h-screen flex flex-col justify-between bg-gradient-to-t from-secondary to-lighter text-darker">
+<body class="min-h-screen flex flex-col justify-between bg-stone-50">
   
-  <header class="flex justify-between items-center">
-    <a href="/">
+  <header class="flex justify-between items-center bg-gradient-to-b from-wisegreen to-stone-50">
+    <a class="block" href="/">
       <div class="flex items-center">
         <img src="/assets/logo.svg" alt="Logo O'Coffee">
-        <h1 class="font-mono text-4xl mb-2">O'Coffee</h1>
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div
+              class="absolute inset-0 bg-gradient-to-r from-primary to-darker shadow-lg transform  skew-y-0 -rotate-6 rounded-3xl">
+          </div>
+          <div class="text-white relative bg-gradient-to-r from-darker to-primary shadow-lg rounded-3xl p-4">
+            <h1 class="font-mono text-2xl sm:text-4xl">O'Coffee</h1>
+          </div>
+        </div>
       </div>
     </a> 
     <div id="menu-trigger" class="lg:hidden p-4 cursor-pointer">
       <i class="fa-solid fa-bars fa-xl"></i>
       <i class="fa-solid fa-xmark fa-xl !hidden"></i>
     </div>   
-    <nav id="menu" class="lg:flex lg:items-center hidden">
-      <ul class="lg:flex lg:items-center ">
-        <li class="m-2 btn"><a href="/">Accueil</a></li>
-        <li class="m-2 btn"><a href="/about">à propos</a></li>
-        <li class="m-2 btn"><a href="/shop">Catalogue</a></li>
-        <li class="m-2 btn"><a href="/contact">Contact</a></li>        
+    <nav id="menu" class="absolute top-40 right-0 lg:static lg:flex lg:items-center hidden">
+      <ul class="lg:flex lg:items-center text-xl uppercase font-bold p-4">
+        <li class="m-2 hover:text-primary"><a href="/">Accueil</a></li>
+        <li class="m-2 hover:text-primary"><a href="/about">à propos</a></li>
+        <li class="m-2 hover:text-primary"><a href="/shop">Catalogue</a></li>
+        <li class="m-2 hover:text-primary"><a href="/contact">Contact</a></li>        
       </ul>
     </nav>
   </header> 

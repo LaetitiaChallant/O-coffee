@@ -13,6 +13,8 @@ app.use(express.static(path.join(import.meta.dirname, "public")));
 
 app.use(express.urlencoded({ extended: true}));
 
+app.use("/favicon.ico", express.static("./public/images/favicon-16x16.png"));
+
 app.use(router);
 
 const port = process.env.PORT;
