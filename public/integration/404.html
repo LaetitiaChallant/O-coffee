@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>O coffee</title>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-lighter text-darker">
+  
+  <header class="flex justify-between">
+    <div class="flex items-center">
+      <img src="assets/logo.svg" alt="Logo O'Coffee">
+      <h1 class="font-mono text-4xl mb-2">O'Coffee</h1>
+    </div>    
+    <nav class="flex items-center">
+      <ul class="flex items-center">
+        <li class="mx-2 btn"><a href="/">Accueil</a></li>
+        <li class="mx-2 btn"><a href="/shop">Catalogue</a></li>        
+      </ul>
+    </nav>
+  </header> 
+
+  <main class="container my-16 mx-auto">
+    
+    <div class="flex flex-col">
+      <div class="flex flex-col">
+        <div class="h-96 bg-[url(/assets/about.jpg)] brightness-125 my-16 bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-lg">
+          <h2 class="text-primary text-center text-4xl font-extrabold uppercase p-4 backdrop-brightness-50 rounded-lg">404 - Vous semblez perdu!</h2>   
+        </div>
+             
+        <ul>
+          <li class="p-2 mb-4"><a class="btn" href="/">Retour à l'accueil</a></li>
+          <li class="p-2"><a class="btn" href="/shop">Catalogue</a></li>
+        </ul>
+       
+    </div>    
+  </main>
+
+  <footer class="backdrop-contrast-75 text-center">
+    <small>O'Coffee - 2025</small>
+  </footer>
+</body>
+</html>

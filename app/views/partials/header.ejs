@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5aa7664434.js" crossorigin="anonymous"></script>
+  <script defer src="/javascript/menu.js"></script>
+  <% if (typeof script !== "undefined") { %>
+    <script defer src="/javascript/allproduct.js"></script>
+  <% } %>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+  
+  <% if (typeof map !== "undefined") { %>
+    <script defer src="/javascript/map.js"></script>
+  <% } %>
+  <script defer src="/javascript/success-message.js"></script>
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>O coffee</title>
+</head>
+<body class="min-h-screen flex flex-col justify-between bg-stone-50">
+  
+  <header class="flex justify-between items-center bg-gradient-to-b from-wisegreen to-stone-50">
+    <a class="block" href="/">
+      <div class="flex items-center">
+        <img src="/assets/logo.svg" alt="Logo O'Coffee">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div
+              class="absolute inset-0 bg-gradient-to-r from-primary to-darker shadow-lg transform  skew-y-0 -rotate-6 rounded-3xl">
+          </div>
+          <div class="text-white relative bg-gradient-to-r from-darker to-primary shadow-lg rounded-3xl p-4">
+            <h1 class="font-mono text-2xl sm:text-4xl">O'Coffee</h1>
+          </div>
+        </div>
+      </div>
+    </a> 
+    <div id="menu-trigger" class="lg:hidden p-4 cursor-pointer">
+      <i class="fa-solid fa-bars fa-xl"></i>
+      <i class="fa-solid fa-xmark fa-xl !hidden"></i>
+    </div>   
+    <nav id="menu" class="absolute top-28 right-0 lg:static lg:flex lg:items-center hidden">
+      <ul class="lg:flex lg:items-center text-xl uppercase font-bold p-4">
+        <li class="m-2 hover:text-primary"><a href="/">Accueil</a></li>
+        <li class="m-2 hover:text-primary"><a href="/about">à propos</a></li>
+        <li class="m-2 hover:text-primary"><a href="/shop">Catalogue</a></li>
+        <li class="m-2 hover:text-primary"><a href="/contact">Contact</a></li>        
+      </ul>
+    </nav>
+  </header> 

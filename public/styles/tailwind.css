@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;    
+  }
+}
+@theme {
+  --color-primary: #F7DBB9;  
+  --color-wisegreen: #7C8C63;
+  --color-darker: #3E1E04;
+  --color-danger: #CF640C;
+
+  --font-mono: "Space Mono", monospace;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  background-color: #F7DBB9;
+  padding:  0.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 2px 1px #3e1e049d;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #7C8C63;  
+}
+.btn:active {
+  box-shadow: none;
+}
+
+.separation {
+  border-bottom: 1px solid #3e1e049d;
+  box-shadow: 0 4px 4px -3px #3e1e049d;
+}

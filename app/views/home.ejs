@@ -1,0 +1,42 @@
+<%- include("partials/header") %>
+  <% if (typeof success !== "undefined" && success) { %>
+    <p id="success-message" class="absolute top-32 right-0 bg-primary border-l-4 border-green-400 text-darker font-bold p-4"><%= success %></p>
+  <% } %>
+  <main class="container my-16 mx-auto">
+    <h2 class="text-4xl font-extrabold uppercase p-4 my-8">La boutique O'Coffee</h2>
+    <div class="flex flex-col md:flex-row">
+      <div class="flex basis-1/2 flex-col">        
+        <p class="px-4 py-2">
+          Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens. Dès que vous franchissez la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants de café fraîchement moulu.
+        </p>
+        <p class="px-4 py-2">
+          L'atmosphère est empreinte d'une lueur chaleureuse, avec des lumières tamisées qui créent des jeux d'ombres et de lumières apaisants. Les murs sont ornés d'éléments rustiques, de panneaux en bois et de photographies captivantes de plantations de café, évoquant l'origine de ces délices aromatiques.
+        </p>
+        <p class="px-4 py-2">
+          Les étagères en bois exposent fièrement une variété de grains de café provenant des quatre coins du monde, chacun racontant une histoire unique de terroir et de culture. Les sacs de café empilés dévoilent une palette de couleurs allant des tons chocolat aux nuances ambrées, invitant à l'exploration sensorielle.
+        </p>
+        <a href="/about" class="btn self-end m-4">En savoir plus</a>
+      </div>
+      <div class="basis-1/2 flex flex-col justify-center">
+        <img class="object-contain" src="/assets/about.jpg" alt="sélection de cafés">
+      </div>
+    </div>
+    <div class="h-96 bg-[url(/assets/coffees/100955890.png)] brightness-125 my-4 bg-no-repeat bg-center bg-cover flex justify-center items-center rounded-lg">
+      <div class="flex justify-center items-center">
+        <a href="/shop" class="btn m-4">Découvrez notre catalogue</a>
+      </div>
+    </div>
+    <h2 class="text-4xl sm:text-xl font-extrabold uppercase p-4 my-8">Nos nouveautés</h2>
+    <div class="carousel flex flex-col gap-y-4 md:gap-y-0 md:flex-row md:gap-x-4">
+      <% for (let coffee of coffees.slice(0, 3)) { %>
+        <article class="w-5/6 m-auto md:w-1/3 flex flex-col items-center rounded-lg shadow shadow-darker">
+          <h3 class="text-center h-32 text-2xl font-bold uppercase p-4"><%= coffee.name %></h3>
+          <img class="w-3/4 h-[350px] rounded-lg" src="/assets/coffees/<%= coffee.img_reference %>.png" alt="café <%= coffee.name %>">
+          <a href="/article/<%= coffee.id %>" class="btn m-4">Découvrir</a>
+        </article>
+      <% } %>
+      
+    </div>   
+    
+  </main>
+  <%- include('partials/footer') %>
